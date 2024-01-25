@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var targetLabel: UILabel!
+    
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet var letterButtons: [UIButton]!
     
@@ -41,8 +42,8 @@ class GameViewController: UIViewController {
     
     func updateUI() {
         targetLabel.text = "\(gameBrain.targetLetter)"
-        scoreLabel.text = "\(gameBrain.score)"
-        secondsLabel.text = "\(gameBrain.secondsRemaining)"
+        scoreLabel.text = "Score: \(gameBrain.score)"
+        secondsLabel.text = "Seconds: \(gameBrain.secondsRemaining)"
         
         var idx = 0
         for letter in letterButtons {
