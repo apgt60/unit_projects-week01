@@ -32,7 +32,23 @@ class GameViewController: UIViewController {
         gameBrain.newGame(numLetters: 12)
         updateUI()
         configureTimer()
+        
+        self.navigationItem.title = ""
+        self.navigationItem.leftBarButtonItem =
+        UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(addTapped))
+        
     }
+    
+    @objc func addTapped(){
+        print("Back nav item tapped")
+        timer.invalidate()
+        print("Dismiss - high score:\(gameBrain.highScore)")
+        if let parent = self.presentingViewController {
+                parent.viewWillAppear(true)
+              }
+        self.dismiss(animated: true)
+    }
+    	
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -47,9 +63,16 @@ class GameViewController: UIViewController {
         
         var idx = 0
         for letter in letterButtons {
-            letter.setTitle(gameBrain.randomLetters[idx], for: .normal)
+            let buttonLetter = gameBrain.randomLetters[idx]
+            letter.setTitle(buttonLetter, for: .normal)
+            if(buttonLetter == gameBrain.targetLetter){
+                letter.backgroundColor = UIColor.red
+            } else {
+                letter.backgroundColor = UIColor.systemBlue
+            }
             idx += 1
         }
+        
     }
     
     func configureTimer() {
