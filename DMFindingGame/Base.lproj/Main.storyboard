@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLM-BX-Ev8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ixd-UR-J1C">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -40,7 +40,7 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="startButtonPressed:" destination="cLM-BX-Ev8" eventType="touchUpInside" id="14k-nP-zRA"/>
+                                            <segue destination="gIq-3a-2e9" kind="show" id="YLZ-rl-yaW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -53,25 +53,25 @@
                             <constraint firstItem="Ky7-Gg-ajs" firstAttribute="centerY" secondItem="8ZV-5E-ebi" secondAttribute="centerY" id="ohi-R1-03w"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qmu-y1-aKq"/>
                     <connections>
                         <outlet property="highScoreLabel" destination="Jsg-2T-6G5" id="FRb-IX-IzF"/>
-                        <segue destination="UbD-X2-yKq" kind="show" identifier="goToGame" id="ncs-54-SZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b22-Od-7or" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2226.1538461538462" y="-261.6113744075829"/>
+            <point key="canvasLocation" x="-1296.9230769230769" y="-261.6113744075829"/>
         </scene>
         <!--BackToStart-->
         <scene sceneID="G1s-m7-jn3">
             <objects>
                 <viewController id="gIq-3a-2e9" customClass="GameViewController" customModule="DMFindingGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IpO-fd-9Om">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="ZTn-DU-wtZ" userLabel="ScoreAndSeconds">
-                                <rect key="frame" x="255" y="61" width="125" height="51.333333333333343"/>
+                                <rect key="frame" x="255" y="96" width="125" height="51.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xI2-WC-jjJ" userLabel="score-label">
                                         <rect key="frame" x="43" y="0.0" width="82" height="25.666666666666668"/>
@@ -91,19 +91,19 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzO-V1-FVR" userLabel="target-label">
-                                <rect key="frame" x="0.0" y="101" width="390" height="65.666666666666686"/>
+                                <rect key="frame" x="0.0" y="136" width="390" height="65.666666666666686"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="dlK-xH-jfi" userLabel="letters">
-                                <rect key="frame" x="10" y="176.66666666666669" width="370" height="607.33333333333326"/>
+                                <rect key="frame" x="10" y="211.66666666666669" width="370" height="548.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="C8K-2x-T5M" userLabel="digits-0">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="169"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="149.33333333333334"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsw-8e-LMn" userLabel="button-00">
-                                                <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="169"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="149.33333333333334"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -115,7 +115,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aw2-F3-MxP" userLabel="button-01">
-                                                <rect key="frame" x="98.333333333333343" y="0.0" width="75.333333333333343" height="169"/>
+                                                <rect key="frame" x="98.333333333333343" y="0.0" width="75.333333333333343" height="149.33333333333334"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -127,7 +127,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJA-2O-2Pr" userLabel="button-02">
-                                                <rect key="frame" x="196.66666666666666" y="0.0" width="74.999999999999972" height="169"/>
+                                                <rect key="frame" x="196.66666666666666" y="0.0" width="74.999999999999972" height="149.33333333333334"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -139,7 +139,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSj-LB-zbX" userLabel="button-03">
-                                                <rect key="frame" x="294.66666666666669" y="0.0" width="75.333333333333314" height="169"/>
+                                                <rect key="frame" x="294.66666666666669" y="0.0" width="75.333333333333314" height="149.33333333333334"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -153,10 +153,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="h42-KX-f5u" userLabel="digits-1">
-                                        <rect key="frame" x="0.0" y="219" width="370" height="169.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="199.33333333333337" width="370" height="149.66666666666663"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4I-DC-gcl" userLabel="button-10">
-                                                <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="169.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="149.66666666666666"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -168,7 +168,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnM-sU-Fr0" userLabel="button-11">
-                                                <rect key="frame" x="98.333333333333343" y="0.0" width="75.333333333333343" height="169.33333333333334"/>
+                                                <rect key="frame" x="98.333333333333343" y="0.0" width="75.333333333333343" height="149.66666666666666"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -180,7 +180,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hE-Rh-ahC" userLabel="button-12">
-                                                <rect key="frame" x="196.66666666666666" y="0.0" width="74.999999999999972" height="169.33333333333334"/>
+                                                <rect key="frame" x="196.66666666666666" y="0.0" width="74.999999999999972" height="149.66666666666666"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -192,7 +192,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xw9-ON-iKt" userLabel="button-13">
-                                                <rect key="frame" x="294.66666666666669" y="0.0" width="75.333333333333314" height="169.33333333333334"/>
+                                                <rect key="frame" x="294.66666666666669" y="0.0" width="75.333333333333314" height="149.66666666666666"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -206,10 +206,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="rJR-Sz-vt8" userLabel="digits-2">
-                                        <rect key="frame" x="0.0" y="438.33333333333337" width="370" height="169"/>
+                                        <rect key="frame" x="0.0" y="399" width="370" height="149.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyd-Yd-YKZ" userLabel="button-20">
-                                                <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="169"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="149.33333333333334"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -221,7 +221,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXk-l6-Pev" userLabel="button-21">
-                                                <rect key="frame" x="98.333333333333343" y="0.0" width="75.333333333333343" height="169"/>
+                                                <rect key="frame" x="98.333333333333343" y="0.0" width="75.333333333333343" height="149.33333333333334"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -233,7 +233,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK8-AE-V9c" userLabel="button-22">
-                                                <rect key="frame" x="196.66666666666666" y="0.0" width="74.999999999999972" height="169"/>
+                                                <rect key="frame" x="196.66666666666666" y="0.0" width="74.999999999999972" height="149.33333333333334"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -245,7 +245,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMS-lv-y8r" userLabel="button-23">
-                                                <rect key="frame" x="294.66666666666669" y="0.0" width="75.333333333333314" height="169"/>
+                                                <rect key="frame" x="294.66666666666669" y="0.0" width="75.333333333333314" height="149.33333333333334"/>
                                                 <color key="backgroundColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -297,38 +297,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPW-Bq-Lit" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-166.15384615384616" y="-262.32227488151659"/>
+            <point key="canvasLocation" x="-426" y="-262"/>
         </scene>
-        <!--Nav Item Title-->
-        <scene sceneID="8h5-TL-btJ">
+        <!--Navigation Controller-->
+        <scene sceneID="LQ4-Or-WXp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UbD-X2-yKq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ixd-UR-J1C" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Nav Item Title" id="dwK-YW-6i0"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CLO-vk-j4U">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="grC-lR-fGl">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.043137254899999998" green="0.37647058820000001" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" systemColor="viewFlipsideBackgroundColor"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="gIq-3a-2e9" kind="relationship" relationship="rootViewController" id="OKS-Mb-yqf"/>
+                        <segue destination="cLM-BX-Ev8" kind="relationship" relationship="rootViewController" id="zkD-7R-PR4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Xl-ZU-qqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0A4-a8-9V8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1095.3846153846152" y="-262.32227488151659"/>
+            <point key="canvasLocation" x="-2226.1538461538462" y="-261.6113744075829"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="viewFlipsideBackgroundColor">
-            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

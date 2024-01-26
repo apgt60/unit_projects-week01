@@ -32,11 +32,6 @@ class GameViewController: UIViewController {
         gameBrain.newGame(numLetters: 12)
         updateUI()
         configureTimer()
-        
-        self.navigationItem.title = ""
-        self.navigationItem.leftBarButtonItem =
-        UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(addTapped))
-        
     }
     
     @objc func addTapped(){
@@ -88,10 +83,11 @@ class GameViewController: UIViewController {
         if gameBrain.secondsRemaining <= 0 {
             timer.invalidate()
             print("Dismiss - high score:\(gameBrain.highScore)")
-            if let parent = self.presentingViewController {
-                    parent.viewWillAppear(true)
-                  } 
-            self.dismiss(animated: true)
+            navigationController?.popViewController(animated: true)
+//            if let parent = self.presentingViewController {
+//                    parent.viewWillAppear(true)
+//                  } 
+//            self.dismiss(animated: true)
         }
     }
     

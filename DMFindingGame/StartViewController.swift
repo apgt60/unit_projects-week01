@@ -23,10 +23,4 @@ class StartViewController: UIViewController {
     }
     
     
-    @IBAction func startButtonPressed(_ sender: UIButton) {
-        print("Start button pressed")
-        performSegue(withIdentifier: "goToGame", sender: nil)
-    }
-    
-    
 }
