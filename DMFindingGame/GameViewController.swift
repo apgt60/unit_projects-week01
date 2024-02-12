@@ -32,12 +32,15 @@ class GameViewController: UIViewController {
         gameBrain.newGame(numLetters: 12)
         updateUI()
         configureTimer()
+        print("Filemanager stuff...")
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     
     @objc func addTapped(){
         print("Back nav item tapped")
         timer.invalidate()
         print("Dismiss - high score:\(gameBrain.highScore)")
+        
         if let parent = self.presentingViewController {
                 parent.viewWillAppear(true)
               }
@@ -49,6 +52,9 @@ class GameViewController: UIViewController {
         super.viewDidDisappear(animated)
         
         timer.invalidate()
+        
+        print("viewDidDisappear - Store - Current score: \(gameBrain.score)")
+        CoreDataManager.shared.addScore(score: gameBrain.score)
     }
     
     func updateUI() {

@@ -18,7 +18,7 @@ class GameBrain {
     let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     
     func generateRandomLetters(numLetters: Int) -> [String] {
-            print("targetLetter:\(targetLetter)")
+            //print("targetLetter:\(targetLetter)")
             //return array
             var retArr = [String]()
             //indexes of letters array that have been used
@@ -26,27 +26,27 @@ class GameBrain {
             //index of return array where the target letter
             //will go
             let targetIdx = Int.random(in: 0..<numLetters)
-            print("targetIdx:\(targetIdx)")
+            //print("targetIdx:\(targetIdx)")
             var i = 0
             while i < numLetters {
                 let idx = Int.random(in: 0..<26)//TODO: use letters.count
                 if(usedIdxs.contains(idx) || letters[idx] == targetLetter){
-                    print("Already used letter: \(letters[idx])")
+              //      print("Already used letter: \(letters[idx])")
                     continue
                 }
                 if(i == targetIdx){
                     retArr.append(targetLetter)
                     let targetLetterIdx = letters.firstIndex(where: {$0 == targetLetter})!
-                    print("Inserting targetLetter \(targetLetter) at idx \(targetIdx)")
+                    //print("Inserting targetLetter \(targetLetter) at idx \(targetIdx)")
                     usedIdxs.append(targetLetterIdx)
                 } else {
-                    print("Adding letter \(letters[idx])")
+                    //print("Adding letter \(letters[idx])")
                     retArr.append(letters[idx])
                     usedIdxs.append(idx)
                 }
                 i += 1
             }
-        print("returning array length=\(retArr.count) numLetters=\(numLetters)")
+//        print("returning array length=\(retArr.count) numLetters=\(numLetters)")
             return retArr
         }
     
@@ -58,6 +58,8 @@ class GameBrain {
     
     func newGame(numLetters: Int) {
         self.numLetters = numLetters
+        print("Existing scores...")
+        print(CoreDataManager.shared.fetchScores().count)
         score = 0
         secondsRemaining = 5
         newRound()

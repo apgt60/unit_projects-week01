@@ -18,7 +18,7 @@ class StartViewController: UIViewController {
         super.viewWillAppear(animated)
         print("StartViewController.viewWillAppear")
         
-        highScoreLabel.text = "High Score: \(gameBrain.highScore)"
+        highScoreLabel.text = "High Score: \(CoreDataManager.shared.calculateHighScore())"
         
     }
     
