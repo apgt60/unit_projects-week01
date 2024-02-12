@@ -75,8 +75,6 @@ class GameBrain {
         newRound()
     }
     
-    
-    
-    
     static let shared = GameBrain()
+    
 }

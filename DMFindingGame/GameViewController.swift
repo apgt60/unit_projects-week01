@@ -90,57 +90,7 @@ class GameViewController: UIViewController {
             timer.invalidate()
             print("Dismiss - high score:\(gameBrain.highScore)")
             navigationController?.popViewController(animated: true)
-//            if let parent = self.presentingViewController {
-//                    parent.viewWillAppear(true)
-//                  } 
-//            self.dismiss(animated: true)
         }
-    }
-    
-//    func newRound() {
-//        updateTargetLetterLabel()
-//        randomLetters = generateRandomLetters(numLetters: 12)
-//        updateLetterButtons()
-//        
-//        
-//    }
-//    
-//    func generateRandomLetters(numLetters: Int) -> [String] {
-//        print("targetLetter:\(targetLetter)")
-//        //return array
-//        var retArr = [String]()
-//        //indexes of letters array that have been used
-//        var usedIdxs = [Int]()
-//        //index of return array where the target letter
-//        //will go
-//        let targetIdx = Int.random(in: 0..<numLetters)
-//        print("targetIdx:\(targetIdx)")
-//        var i = 0
-//        while i < numLetters {
-//            let idx = Int.random(in: 0..<26)
-//            if(usedIdxs.contains(idx) || letters[idx] == targetLetter){
-//                print("Already used letter: \(letters[idx])")
-//                continue
-//            }
-//            if(i == targetIdx){
-//                retArr.append(targetLetter)
-//                let targetLetterIdx = letters.firstIndex(where: {$0 == targetLetter})!
-//                print("Inserting targetLetter \(targetLetter) at idx \(targetIdx)")
-//                usedIdxs.append(targetLetterIdx)
-//            } else {
-//                print("Adding letter \(letters[idx])")
-//                retArr.append(letters[idx])
-//                usedIdxs.append(idx)
-//            }
-//            i += 1
-//        }
-//        return retArr
-//    }
-    
-    func calculateNewScore(selectedLetter: String) {
-//        if(selectedLetter == targetLetter){
-//            score += 1
-//        }
     }
     
 }

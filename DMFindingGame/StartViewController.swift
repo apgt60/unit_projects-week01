@@ -11,7 +11,6 @@ class StartViewController: UIViewController {
     
     @IBOutlet weak var highScoreLabel: UILabel!
     
-    
     let gameBrain = GameBrain.shared
     
     override func viewWillAppear(_ animated: Bool) {
@@ -21,6 +20,5 @@ class StartViewController: UIViewController {
         highScoreLabel.text = "High Score: \(CoreDataManager.shared.calculateHighScore())"
         
     }
-    
     
 }
